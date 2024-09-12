@@ -1,0 +1,32 @@
+{
+  "name": "mutator",
+  "version": "1.0.0",
+  "description": "Mutate items with use lodash template",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prettier": "npx prettier --write src/* test/* example/*",
+    "tslint": "tslint -p tslint -p tsconfig.json",
+    "codestyle": "npm run prettier && npm run tslint"
+  },
+  "author": "Sergey Rodionchev",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.17.7",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^5.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run codestyle"
+    }
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
